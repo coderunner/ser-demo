@@ -10,7 +10,10 @@ import uuid
 
 app = Flask('SER_DEMO')
 
-BOOKS = [Book(str(uuid.uuid4()), 'Le bon livre', 'H. Lebon'), Book(str(uuid.uuid4()),'Un autre bon livre', "B. LeBonAussi")]
+BOOKS = [
+  Book(str(uuid.uuid4()), 'Le bon livre', 'H. Lebon'),
+  Book(str(uuid.uuid4()),'Un autre bon livre', "B. LeBonAussi")
+ ]
 
 CONTENT_TYPE_JSON = "application/json"
 CONTENT_TYPE_XML = "application/xml"

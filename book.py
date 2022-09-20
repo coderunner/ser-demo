@@ -1,11 +1,12 @@
+from dataclasses import dataclass
 import xml.etree.ElementTree as ET
 import json
 
+@dataclass
 class Book:
-  def __init__(self, id, title, author):
-    self.id = id
-    self.title = title
-    self.author = author
+    id: str
+    title: str
+    author: str
 
 def to_dict(book): 
     return book.__dict__
