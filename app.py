@@ -18,7 +18,7 @@ BOOKS = [
 CONTENT_TYPE_JSON = "application/json"
 CONTENT_TYPE_XML = "application/xml"
 
-@app.route("/books")
+@app.get("/books")
 def get_books():
     content_type = request.headers.get('accept')
 
@@ -38,7 +38,7 @@ def get_books():
     else:
       raise UnsupportedMediaType()
 
-@app.route("/books", methods=["POST"])
+@app.post("/books")
 def post_book():
     content_type = request.headers.get('content-type')
     data = request.get_data()
